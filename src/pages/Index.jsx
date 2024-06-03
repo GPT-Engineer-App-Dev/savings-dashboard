@@ -1,18 +1,34 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={4}>
+      <Flex direction={{ base: "column", md: "row" }} justify="space-between">
+        <Box flex="3" p={4}>
+          <Text fontSize="3xl" mb={4}>Featured Articles</Text>
+          <VStack spacing={4} align="stretch">
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Text fontSize="xl">Article 1</Text>
+              <Text mt={2}>Summary of the first article...</Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Text fontSize="xl">Article 2</Text>
+              <Text mt={2}>Summary of the second article...</Text>
+            </Box>
+          </VStack>
+        </Box>
+        <Box flex="1" p={4}>
+          <Text fontSize="2xl" mb={4}>Trending News</Text>
+          <VStack spacing={4} align="stretch">
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Text>Trending News 1</Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Text>Trending News 2</Text>
+            </Box>
+          </VStack>
+        </Box>
+      </Flex>
     </Container>
   );
 };
